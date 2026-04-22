@@ -140,7 +140,6 @@ int main() {
 
     while (exitcell == entrance) {
         exitcell = chooseBoundaryCell(maze);
-        //asd
     }
 
     int ent_r = entrance.first;
