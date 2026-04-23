@@ -123,6 +123,9 @@ bool dfs(int r, int c,
          vector<vector<int>>& parent_r,
          vector<vector<int>>& parent_c,
          int exit_r, int exit_c) {
+    if (r == exit_r && c == exit_c) {
+        return true;
+    }
 
 }
 
