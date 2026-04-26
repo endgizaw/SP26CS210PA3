@@ -127,6 +127,8 @@ bool dfs(int r, int c,
         return true;
     }
 
+    visited[r][c] = true;
+
 }
 
 
