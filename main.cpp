@@ -133,6 +133,12 @@ bool dfs(int r, int c,
         int newr = r + dr[i];
         int newc = c + dc[i];
 
+        parent_r[newr][newc] = r;
+        parent_c[newr][newc] = c;
+
+        if (dfs(newr, newc, parent_r, parent_c, exit_r, exit_c)) {
+            return true;
+        }
     }
 
 }
