@@ -133,6 +133,7 @@ bool dfs(int r, int c,
         int newr = r + dr[i];
         int newc = c + dc[i];
 
+        if (newr < 0 || newc < 0 || newr >= N || newc >= M) {}
         parent_r[newr][newc] = r;
         parent_c[newr][newc] = c;
 
