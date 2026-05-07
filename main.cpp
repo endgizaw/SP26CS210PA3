@@ -133,13 +133,15 @@ bool dfs(int r, int c,
         int newr = r + dr[i];
         int newc = c + dc[i];
 
-        if (newr < 0 || newc < 0 || newr >= N || newc >= M) {}
-        parent_r[newr][newc] = r;
-        parent_c[newr][newc] = c;
+        if (!visited[newr][newc] || newr < 0 || newc < 0 || newr >= N || newc >= M || maze[newr][newc] == 0) {
 
-        if (dfs(newr, newc, parent_r, parent_c, exit_r, exit_c)) {
-            return true;
+            parent_r[newr][newc] = r;
+            parent_c[newr][newc] = c;
+            if (dfs(newr, newc, parent_r, parent_c, exit_r, exit_c)) {
+                return true;
+            }
         }
+
     }
     return false;
 
